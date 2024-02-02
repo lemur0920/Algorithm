@@ -1,0 +1,16 @@
+a, b = [], []
+
+n, m = map(int, input().split())
+
+for row in range(n):
+    temp = list(map(int, input().split()))
+    a.append(temp)
+
+for row in range(n):
+    temp = list(map(int, input().split()))
+    b.append(temp)
+
+for row in range(n):
+    for col in range(m):
+        print(a[row][col] + b[row][col], end=' ')
+    print()
