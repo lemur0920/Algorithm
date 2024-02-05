@@ -1,0 +1,15 @@
+arr = []
+maxNum = 0
+row, col = 1, 1
+for i in range(9):
+    a = list(map(int, input().split()))
+    arr.append(a)
+
+for i in range(len(arr)):
+    for j in range(len(arr[i])):
+        if arr[i][j] > maxNum:
+            maxNum = arr[i][j]
+            row, col = i+1, j+1
+print(maxNum)
+print(row, col, end=' ')
+
