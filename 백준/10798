@@ -1,0 +1,11 @@
+arr = []
+for i in range(5):
+    arr.append(input())
+
+for i in range(len(max(arr, key=len))):
+    for j in range(5):
+        try:
+            print(arr[j][i], end='')
+        except IndexError:
+            pass
+        continue
