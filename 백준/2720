@@ -1,0 +1,24 @@
+n = int(input())
+arr = []
+quarter, dime, nickel, penny = 0, 0, 0, 0
+for _ in range(n):
+    change = int(input())
+    while True:
+        if change >= 25:
+            change = change - 25
+            quarter += 1
+        elif change >= 10:
+            change = change - 10
+            dime += 1
+        elif change >= 5:
+            change = change - 5
+            nickel += 1
+        elif change >= 1:
+            change = change - 1
+            penny += 1
+        else:
+            break
+    arr.append([quarter, dime, nickel, penny])
+    quarter, dime, nickel, penny = [0 for _ in ([quarter, dime, nickel, penny])]
+for i in range(len(arr)):
+    print(*arr[i])
