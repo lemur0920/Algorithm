@@ -1,0 +1,11 @@
+n = int(input())
+k = 2
+l = 1
+ans = 0
+
+for i in range(n):
+    k += l
+    ans = k * k
+    l *= 2
+
+print(ans)
