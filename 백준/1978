@@ -1,0 +1,15 @@
+arr = []
+n = input()
+arr.extend(input().split())
+cnt = 0
+tmp = 0
+iArr = [int(i) for i in arr]
+for i in iArr:
+    if i != 1:
+        for j in range(1, i):
+            if i % j == 0:
+                cnt += 1
+        if cnt == 1:
+            tmp += 1
+    cnt = 0
+print(tmp)
