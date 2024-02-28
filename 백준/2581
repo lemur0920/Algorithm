@@ -1,0 +1,17 @@
+m = int(input())
+n = int(input())
+tmpArr = []
+for i in range(m, n + 1):
+    bVal = True
+    for j in range(2, i):
+        if i % j == 0:
+            bVal = False
+            break
+    if bVal and i != 1:
+        tmpArr.append(i)
+
+if len(tmpArr) > 0:
+    print(sum(tmpArr))
+    print(min(tmpArr))
+else:
+    print(-1)
