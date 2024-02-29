@@ -1,0 +1,13 @@
+n = int(input())
+i = 2
+factors = []
+
+while i <= n:
+    if n % i == 0:
+        factors.append(i)
+        n /= i
+    else:
+        i += 1
+
+for i in range(len(factors)):
+    print(factors[i])
