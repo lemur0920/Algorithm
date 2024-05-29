@@ -1,0 +1,8 @@
+n = int(input())
+alpha = input()
+num = 0
+for i in range(len(alpha)):
+    r = 31 ** i
+    _a = ord(alpha[i])-96
+    num += r * _a
+print(num)
